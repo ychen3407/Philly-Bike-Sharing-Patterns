@@ -48,7 +48,7 @@ The historical trend dashboard looks like [this](https://lookerstudio.google.com
 
 Real-time Dashboard looks like this:
 
-<img src="images/DashboardRealTime.jpg?raw=true">
+<img src="images/DashboardRealTime.png?raw=true">
 
 ### Some Insights
 From the analysis and dashboard, I had found that 
