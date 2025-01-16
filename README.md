@@ -1,7 +1,7 @@
 # Philly-Bike-Sharing-Patterns DE Project :bike:
 Philadelphia is recognized as one of the most bike-friendly cities in the United States. The Indego bike share program maintains hundreds of self-serve stations across the city, where individuals can easily access bikes for quick trips or purchase longer-term passes.
 
-<img src="images/IndegoBikes.jpg?raw=true">
+<img src="images/IndegoBikes.jpg?raw=true" width="500">
 
 This project focuses on building a data pipeline to analyze bike share patterns in Philadelphia.
 
@@ -17,7 +17,7 @@ These data sources provides comprehensive information for us to explore the foll
 
 The data comes from both real-time sources (e.g., station status) and batch sources, which are handled separately. The pipeline architecture is illustrated below: 
 
-<img src="images/Architecture.png?raw=true">
+<img src="images/Architecture.png?raw=true" height="300">
 
 ### Tools Used:
 - Airflow: Workflow orchestration
@@ -38,20 +38,29 @@ I used Airflow to schedule Python jobs for data ingestion at different frequenci
 
 DBT was used for data modeling in BigQuery. For this project, I chose a star schema to structure the data.
 
-<img src="images/StarSchema.png?raw=true">
+<img src="images/StarSchema.png?raw=true" height="400">
 
 Finally, Looker Studio was utilized to create visualizations for both historical trends and real-time station status.
 
 The historical trend dashboard looks like [this](https://lookerstudio.google.com/reporting/326e0609-09c1-4e85-ae91-530042fad004):
 
-<img src="images/DashboardHistorical.png?raw=true">
+<img src="images/DashboardHistorical.png?raw=true" height="500">
 
 Real-time Dashboard looks like this:
 
-<img src="images/DashboardRealTime.png?raw=true">
+<img src="images/DashboardRealTime.png?raw=true" height="500">
 
 ### Some Insights
 From the analysis and dashboard, I had found that 
 * Bike demand fluctuates significantly throughout the day, with notable peaks during rush hours (i.e., 8 AM and 6 PM). During these periods, there are more trips, but bike availability tends to be lower due to higher demand
 * Some stations experience consistently high demand, such as Station 3010 (15th & Spruce) and Station 3032 (23rd & South). In contrast, stations located in more peripheral or less densely populated areas tend to be underutilized.
-* Note: We are in the process of accumulating more data to fully understand the impact of weather variables (temperature, rainfall, and snow) on bike usage. 
+
+Note: I am in the process of accumulating more data to fully understand the impact of weather variables (temperature, rainfall, and snow) on bike usage.
+
+### Steps to Reproduce
+prerequisite:
+- GCP user account
+- GCP service account (store key in a .json file)
+- have terraform downloaded
+
+
