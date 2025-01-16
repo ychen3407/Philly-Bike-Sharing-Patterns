@@ -1,10 +1,10 @@
 variable "credential" {
   description = "GCP crediential file path"
-  default     = "C:/Users/Febru/Desktop/de_project/my-cred.json"
+  default     = "myServiceKeyPath"
 }
 
 variable "gcp_project_id" {
-  default     = "essential-wharf-443315-p3"
+  default     = "ProjectId"
 }
 
 variable "gcp_bucket_name" {
@@ -20,4 +20,3 @@ variable "bq_dataset_id" {
   description = "Big Query Dataset id (Globally Unique)"
   default     = "pa_shared_bikes"
 }
-
